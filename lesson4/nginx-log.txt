@@ -1,0 +1,66 @@
+Script started on 2024-04-07 13:06:29+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="238" LINES="68"]
+[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ ls
+[?2004ljava-log.txt  lesson4_terminal.log  nginx-log.txt  ps-log.txt
+[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ nano [K[K[K[K[Kclear
+[?2004l[H[2J[3J[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ car[Kt /v[K[K[K[K[K[Ksystemctl cat nginx_manual
+[?2004l[?1h=[0;1;34m# /lib/systemd/system/nginx_manual.service[0m[m
+[Unit][m
+Description=Nginx for codebyLesson                                  [m
+Documentation=man:nginx(8)[m
+After=network.target nss-lookup.target[m
+[m
+[Service][m
+Type=forking[m
+PIDFile=/run/nginx_manual.pid[m
+ExecStartPre=/usr/sbin/nginx -t -q -g 'daemon on; master_process on;'[m
+ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'[m
+ExecReload=/usr/sbin/nginx -g 'daemon on; master_process on;' -s reload[m
+ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx_manual.pid[m
+TimeoutStopSec=5[m
+KillMode=mixed[m
+[m
+[Install][m
+WantedBy=multi-user.target[m
+[m
+[m
+[K[?1l>[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ systemctl cat nginx_manual[1P nginx_manual[1P nginx_manual[1P nginx_manuals nginx_manualt nginx_manuala nginx_manualt nginx_manualu nginx_manuals nginx_manual
+[?2004l[?1h=[0;1;32m●[0m nginx_manual.service - Nginx for codebyLesson[m
+     Loaded: loaded (/lib/systemd/system/nginx_manual.service; disabled; vendor preset: enabled)[m
+     Active: [0;1;32mactive (running)[0m since Sun 2024-04-07 13:05:36 MSK; 1min 51s ago[m
+       Docs: man:nginx(8)[m
+    Process: 7714 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)[m
+    Process: 7715 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)[m
+   Main PID: 7716 (nginx)[m
+      Tasks: 3 (limit: 2191)[m
+     Memory: 3.2M[m
+        CPU: 25ms[m
+     CGroup: /system.slice/nginx_manual.service[m
+             ├─7716 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"[m
+             ├─7717 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
+             └─7718 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""[m
+[m
+Apr 07 13:05:36 lesson systemd[1]: Starting Nginx for codebyLesson...[m
+Apr 07 13:05:36 lesson systemd[1]: Started Nginx for codebyLesson.[m
+[K[?1l>[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ systemctl status nginx_manual[Ksystemctl status nginx_manual[1P nginx_manual[1P nginx_manual[1P nginx_manual[1P nginx_manual[1P nginx_manual[1P nginx_manuale nginx_manualn nginx_manuala nginx_manualb nginx_manuall nginx_manuale nginx_manual
+[?2004l[1;31m==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-unit-files ===
+[0mAuthentication is required to manage system service or unit files.
+Authenticating as: lesson
+Password: 
+[1;31m==== AUTHENTICATION COMPLETE ===
+[0mCreated symlink /etc/systemd/system/multi-user.target.wants/nginx_manual.service → /lib/systemd/system/nginx_manual.service.
+[1;31m==== AUTHENTICATING FOR org.freedesktop.systemd1.reload-daemon ===
+[0mAuthentication is required to reload the systemd state.
+Authenticating as: lesson
+Password: 
+[1;31m==== AUTHENTICATION COMPLETE ===
+[0m[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ 
+[?2004l[?2004h]0;lesson@lesson: ~[01;32mlesson@lesson[00m:[01;34m~[00m$ exit
+[?2004lexit
+
+Script done on 2024-04-07 13:07:48+03:00 [COMMAND_EXIT_CODE="0"]
