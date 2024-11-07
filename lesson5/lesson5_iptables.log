@@ -1,0 +1,124 @@
+Script started on 2024-11-07 09:12:01-05:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]777;notify;Command completed;sudo su\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ ls
+[?2004l]777;preexec\[0m[01;34mDesktop[0m    [01;34mDownloads[0m  [01;34mPictures[0m  [01;34mTemplates[0m          typescript
+[01;34mDocuments[0m  [01;34mMusic[0m      [01;34mPublic[0m    [01;34mthinclient_drives[0m  [01;34mVideos[0m
+]777;notify;Command completed;ls\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ script [K[K[K[K[K[K[Klssudo suystemctl status tigrevnc-server[10Prestart xrdp[K xrdpstatus tigrevnc-server[Kudo su[Kls[K[Kssh -l admin 10.211.55.7
+[?2004l]777;preexec\(admin@10.211.55.7) Password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last login: Thu Nov  7 08:34:44 2024
+]0;admin@local-nb-ws1:~[?2004h[admin@local-nb-ws1 ~]$ iptables -Ln 
+[?2004liptables v1.8.10 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+]0;admin@local-nb-ws1:~[?2004h[admin@local-nb-ws1 ~]$ iptables -Ln [1@s[1@u[1@d[1@o[1@ 
+[?2004l[sudo] password for admin: 
+iptables: No chain/target/match by that name.
+]0;admin@local-nb-ws1:~[?2004h[admin@local-nb-ws1 ~]$ 
+[?2004l]0;admin@local-nb-ws1:~[?2004h[admin@local-nb-ws1 ~]$ 
+[?2004l]0;admin@local-nb-ws1:~[?2004h[admin@local-nb-ws1 ~]$ 
+[?2004l]0;admin@local-nb-ws1:~[?2004h[admin@local-nb-ws1 ~]$ rx[K[Kexit
+[?2004llogout
+Connection to 10.211.55.7 closed.
+]777;notify;Command completed;ssh -l admin 10.211.55.7\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ ssh -l admin 10.211.55.7[K6
+[?2004l]777;preexec\(admin@10.211.55.6) Password: 
+(admin@10.211.55.6) Password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Last failed login: Thu Nov  7 17:12:46 MSK 2024 from 10.211.55.7 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Thu Nov  7 16:37:01 2024 from 10.211.55.7
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ iptables -Ln
+[?2004liptables v1.8.10 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ iptables -Ln[1@s[1@u[1@d[1@o[1@ 
+[?2004l[sudo] password for admin: 
+Sorry, try again.
+[sudo] password for admin: 
+iptables: No chain/target/match by that name.
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ 
+[?2004l]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ 
+[?2004l]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ ls
+[?2004lloglesson5_iptables.log
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ lssudo iptables -Ln[C[1PLn[C[1Pn[1Pn[1Pn n[C[K[Ks -nL
+[?2004lChain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     6    --  10.211.55.7          0.0.0.0/0            tcp dpt:22
+DROP       6    --  0.0.0.0/0            0.0.0.0/0            tcp dpt:22
+DROP       6    --  0.0.0.0/0            0.0.0.0/0            tcp dpt:22
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ sudo iptables -nLi
+[?2004liptables: No chain/target/match by that name.
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ sudo iptables -nLi[KiL
+[?2004liptables v1.8.10 (nf_tables): no command specified
+Try `iptables -h' or 'iptables --help' for more information.
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ iptables -I INPUT 3 [K[K4 -p ICP[KMPO[K -j DROP
+[?2004liptables v1.8.10 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ iptables -I INPUT 4 -p ICMP -j DROP[1@s[1@u[1@d[1@o[1@ 
+[?2004l]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ sudo iptables -I INPUT 4 -p ICMP -j DROP[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Psudo iptables -niL
+[?2004liptables v1.8.10 (nf_tables): no command specified
+Try `iptables -h' or 'iptables --help' for more information.
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ sudo iptables -niLI INPUT 4 -p ICMP -j DROP[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Psudo iptables -niLLi[K
+[?2004lChain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     6    --  10.211.55.7          0.0.0.0/0            tcp dpt:22
+DROP       6    --  0.0.0.0/0            0.0.0.0/0            tcp dpt:22
+DROP       6    --  0.0.0.0/0            0.0.0.0/0            tcp dpt:22
+DROP       1    --  0.0.0.0/0            0.0.0.0/0           
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+]0;admin@local-sv-dc1:~[?2004h[admin@local-sv-dc1 ~]$ exit
+[?2004llogout
+Connection to 10.211.55.6 closed.
+]777;notify;Command completed;ssh -l admin 10.211.55.6\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ ping 10.211.55.6
+[?2004l]777;preexec\PING 10.211.55.6 (10.211.55.6) 56(84) bytes of data.
+
+^C
+--- 10.211.55.6 ping statistics ---
+6 packets transmitted, 0 received, 100% packet loss, time 5227ms
+
+]777;notify;Command completed;ping 10.211.55.6\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -L [K[KI INPUT 10.211[K[K[K[K[K[K-p 10.211[K[K[K[K[K[Ktcp/22 -S 10.211.55.6 [C[C[1@ [1@1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C - j [C D O [1P R O P 
+[?2004l]777;preexec\iptables v1.8.10 (nf_tables): unknown protocol "tcp/22" specified
+Try `iptables -h' or 'iptables --help' for more information.
+]777;notify;Command completed;iptables -I INPUT 1 -p tcp/22 -S 10.211.55.6 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -I INPUT 1 -p tcp/22 -S 10.211.55.6 -j DROP [1P[1P[1P[1P[1@P[C[C[C[C[C[C[C[1P[1@s[C[C[C[C[C[C[C[C[C[C[C[C[C[1@ [1@-[1@-[1@d[1@st -j DROP  [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- -j DROP [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp -j DROP [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co -j DROP [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr -j DR[1@O[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -j DRO[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr -j DR[1@O[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct -j D[1@R[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -j [1@D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2 -j[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2 -[1@j[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l]777;preexec\iptables v1.8.10 (nf_tables): Cannot use -P with -I
+Try `iptables -h' or 'iptables --help' for more information.
+]777;notify;Command completed;iptables -I INPUT 1 -P tcp -s 10.211.55.6 --dst-port 22 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -I INPUT 1 -P tcp -s 10.211.55.6 --dst-port 22 -j DROP [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C tcp -s 10.211.55.6 --dst-port 22 -j[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cp tcp -s 10.211.55.6 --dst-port 22 -[1@j[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l]777;preexec\iptables v1.8.10 (nf_tables): unknown option "--dst-port"
+Try `iptables -h' or 'iptables --help' for more information.
+]777;notify;Command completed;iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dst-port 22 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dst-port 22 -j DROP [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct 22 -j[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct 22 -j [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct 22 -j D[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct 22 -j DR[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C 22 -j DRO[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct 22 -j DROP[1P [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpt 22 -j DROP [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cot 22 -j DR[1@O[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crt 22 -j D[1@R[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l]777;preexec\iptables v1.8.10 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+]777;notify;Command completed;iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j DROP [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csiptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j [1@D[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cuiptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdiptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -[1@j[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Coiptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 [1@-[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[?2004l]777;preexec\[sudo] password for admin: 
+]777;notify;Command completed;sudo iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ 
+[?2004l]777;notify;Command completed;sudo iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ 
+[?2004l]777;notify;Command completed;sudo iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ 
+[?2004l]777;notify;Command completed;sudo iptables -I INPUT 1 -p tcp -s 10.211.55.6 --dport 22 -j DROP \]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -nl
+[?2004l]777;preexec\iptables v1.8.10 (nf_tables): unknown option "-l"
+Try `iptables -h' or 'iptables --help' for more information.
+]777;notify;Command completed;iptables -nl\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -nl[KL
+[?2004l]777;preexec\iptables v1.8.10 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+]777;notify;Command completed;iptables -nL\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ iptables -nL[1@s[1@u[1@d[1@o[1@ 
+[?2004l]777;preexec\Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+DROP       6    --  10.211.55.6          0.0.0.0/0            tcp dpt:22
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+]777;notify;Command completed;sudo iptables -nL\]777;precmd\]0;admin@local-nb-ws1:~\]7;file://local-nb-ws1.corp.technocat.team/home/admin\[?2004h[admin@local-nb-ws1 ~]$ exi[K[K[Kexit
+[?2004l]777;preexec\exit
+
+Script done on 2024-11-07 09:16:49-05:00 [COMMAND_EXIT_CODE="0"]
